@@ -68,6 +68,7 @@ Algorithm: O(N^2)
 row: start index; column: length of substring.
 2.array initialization 去保证Index不越界也不会留default value.
 
+Space: O(N^2)
 
 Syntax:
 1. length of string: s.length()
