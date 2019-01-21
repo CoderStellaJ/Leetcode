@@ -14,25 +14,25 @@ public:
         
         for(int i = 0; i < len; i++) {
             for(int j = 0; j < len; j++) {
-                palin[i][j] = 0;
-            }
-        }
-        
-        for(int i = 0;i < len; i ++) {
-            palin[i][0] = 1;
-        }
-        for(int i = 0; i < len-1; i++) {
-            if(s[i] == s[i+1]){
-                palin[i][1] = 1;
-            }else{
-                palin[i][1] = 0;
+                if(j == 0) { 
+                    palin[i][0] = 1;
+                }else if(j == 1) {
+                    if(i < len-1) {
+                        if(s[i] == s[i+1]) {
+                            plain[i][1] = 1;
+                        }
+                    }
+                    palin[i][1] = 0;
+                    
+                }else {
+                    palin[i][j] = 0;
+                }
             }
         }
         
         for(sublen = 2; sublen < len; sublen++) {
             for(int i = 0; i < len-sublen; i++) {
                 if(s[i] == s[i+sublen] ){
-                   
                     if(palin[i+1][sublen-2] == 1) {
                         palin[i][sublen]=1;
                     }
