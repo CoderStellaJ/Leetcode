@@ -65,7 +65,9 @@ Palindrome substring using 2D array to store the result of sub problem.
 
 Algorithm: O(N^2)
 1.写之前想清楚你的2D array里每一个dimension的含义，它要装什么。
+row: start index; column: length of substring.
 2.array initialization 去保证Index不越界也不会留default value.
+
 
 Syntax:
 1. length of string: s.length()
