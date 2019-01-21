@@ -58,3 +58,21 @@ public:
         
     }
 };
+
+/////////////////////////////////////////////////////////////////////////////
+/*
+Palindrome substring using 2D array to store the result of sub problem.
+
+Algorithm: O(N^2)
+写之前想清楚你的2D array里每一个dimension的含义，它要装什么。
+
+Syntax:
+1. length of string: s.length()
+2. s[i] is directly the char of index i
+
+
+Test cases:
+string length is 0.
+
+
+*/
