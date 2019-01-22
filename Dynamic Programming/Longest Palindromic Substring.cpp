@@ -3,7 +3,7 @@ public:
     string longestPalindrome(string s) {
         int len = s.length();
         int sublen = 1;
-        if(len == 0) {
+        if(len == 0) {      //corner test case!
             return "";
         }
         int palin [len][len];
@@ -33,7 +33,7 @@ public:
         for(sublen = 2; sublen < len; sublen++) {
             for(int i = 0; i < len-sublen; i++) {
                 if(s[i] == s[i+sublen] ){
-                    if(palin[i+1][sublen-2] == 1) {
+                    if(palin[i+1][sublen-2] == 1) {     //sublen-2 !
                         palin[i][sublen]=1;
                     }
                 }
