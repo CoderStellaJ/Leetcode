@@ -3,7 +3,7 @@ public:
     int myAtoi(string s) {
         int len = s.length();
         int start = 0;
-        int end = -1;
+        int end = -1;       //initialized to an invalid value
         bool sign = false;
         int numsign = 1;
         bool numstart = false;
@@ -28,6 +28,7 @@ public:
                 if(numstart == false) {
                     numstart = true;
                     start = i;
+                    end = i;        //update end once the num starts!
                 }else {
                     end = i;
                 }
