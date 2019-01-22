@@ -43,10 +43,6 @@ public:
             }
         } 
         
-        if(numstart == false) {     //corner test case!
-            return 0;
-        }
-        
         if(sign == true) {
             if(s[start] == '-') {
                 numsign = -1;
