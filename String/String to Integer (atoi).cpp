@@ -112,5 +112,11 @@ Syntax:
 1. max and min of integer: INT_MIN, INT_MAX
 2. convert char to int: s[j] - '0'
 
+Test case:
+1. "" empty string
+2. "+00042" number begins with lots of 0
+3. "  +km" only a valid sign
+4. no valid number
+
 
 */
