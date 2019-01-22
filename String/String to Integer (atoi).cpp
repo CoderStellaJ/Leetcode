@@ -42,7 +42,7 @@ public:
             }
         } 
         
-        if(numstart == false) {
+        if(numstart == false) {     //corner test case!
             return 0;
         }
         
@@ -60,7 +60,7 @@ public:
         
         for(int j = start; j <= end; j++) {
             if(s[j] == '0') {
-                start ++;
+                start ++;       //skip first 0s
             }else{
                 break;
             }
@@ -70,22 +70,22 @@ public:
         
         for(int j = start; j <= end; j++) {
             if(numsign > 0) {
-                if(result > INT_MAX/10) {
+                if(result > INT_MAX/10) {       
                     return INT_MAX; 
                 }else {
-                    if((int)(s[j]-'0') > 7 && result == INT_MAX/10){
+                    if((s[j]-'0') > 7 && result == INT_MAX/10){        //important algorithm on judging whether out of integer range!
                         return INT_MAX;
                     }
                 }
             }else {
                 if(result*numsign < INT_MIN/10) {
                     return INT_MIN;
-                }else if(result*numsign == INT_MIN/10 && (int)(s[j]-'0') > 8) {
+                }else if(result*numsign == INT_MIN/10 && (s[j]-'0') > 8) {
                     return INT_MIN;
                 }
             }
             
-            result =result*10 + (int)(s[j] - '0');
+            result =result*10 + (s[j] - '0');      //s[j] - '0' to convert number char to int
             
         }
         
