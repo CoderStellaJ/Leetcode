@@ -3,7 +3,7 @@ public:
     int myAtoi(string s) {
         int len = s.length();
         int start = 0;
-        int end = 0;
+        int end = -1;
         bool sign = false;
         int numsign = 1;
         bool numstart = false;
@@ -62,7 +62,7 @@ public:
             if(s[j] == '0') {
                 start ++;       //skip first 0s
             }else{
-                break;
+                break;      //break!
             }
         }
         
@@ -92,3 +92,28 @@ public:
         return result*numsign;
     }
 };
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+/*
+Complexity:  8 ms, faster than 99.14% of C++ online submissions for String to Integer 
+
+Algorithm:
+1. determine whether there is sign
+2. determine whether there is number, whether it's valid
+    spaicla cases:
+    invalid case:
+        numstart = false
+    valid case:
+        start = end and s[start] is sign -> return 0
+3. determine actual start and end of the number by skipping sign and first 0s
+4. calculate the int from string
+    result = result*10 + s[j] - '0';
+5. condition for out of integer bound: 	-2,147,483,648 to +2,147,483,647  负8正7
+
+
+Syntax:
+1. max and min of integer: INT_MIN, INT_MAX
+2. convert char to int: s[j] - '0'
+
+
+*/
