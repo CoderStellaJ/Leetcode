@@ -18,7 +18,7 @@ public:
             k--;
         }
         for(int j = 0; j <= numlen/2; j++) {
-            if(digit[j] != digit[numlen-j-1]) {   //[numlen-1-j], take noteice of the index
+            if(digit[j] != digit[numlen-j-1]) {   //[numlen-1-j], take notice of the index
                 return false;
             }
         }
