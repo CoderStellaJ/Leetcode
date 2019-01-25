@@ -3,7 +3,7 @@ public:
     string longestCommonPrefix(vector<string>& strs) {
         int ind = 0;
         int numstr = strs.size();
-        if(numstr == 0) {   //when variable is used as ength of array, always check whether length is 0
+        if(numstr == 0) {   //when variable is used as length of array, always check whether length is 0
             return "";
         }
         int len [numstr];
