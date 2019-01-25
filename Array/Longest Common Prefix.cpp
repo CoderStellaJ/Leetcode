@@ -55,4 +55,8 @@ Syntax:
    #include <algorithm>
    *std::min_element(arr,arr+numelement)
    
+Programming habit:
+debugging statement: //debug
+After debugging, simply comment it out without deleting it.
+   
 */
