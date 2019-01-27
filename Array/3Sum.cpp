@@ -98,4 +98,5 @@ Test case:
 1. [0,0,0,0]
 2. when there are duplicate numbers in the vector
 
+
 */
