@@ -2,6 +2,8 @@
 /*
 Complexity: O(n^2)
 
+Speed: Your runtime beats 9.95 % of cpp submissions.
+
 Algorithm:
 For every i, there isn't only one solution, there may be other solutions after you find one solution.
 Thus, you need to keep moving right and left when left < right
