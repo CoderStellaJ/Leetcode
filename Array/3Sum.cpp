@@ -1,3 +1,30 @@
+/////////////////////////////////////////////////////////////////////
+/*
+Complexity: O(n^2)
+
+Algorithm:
+For every i, there isn't only one solution, there may be other solutions after you find one solution.
+Thus, you need to keep moving right and left when left < right
+Misunderstanding about the question:
+    when there are duplicate numbers, you just treat the solutions they involved in as one solution.
+    You shouldn't add duplicate solutions into result.
+
+Syntax:
+1. sort a vector: sort(v.begin(), v.end());
+2. check whether a vector contains the element: 
+    if(std::find(v.begin(), v.end(), x) != v.end()) {
+      //v contains x 
+    } else {
+      //v does not contain x 
+    }
+
+
+Test case:
+1. [0,0,0,0]
+2. when there are duplicate numbers in the vector
+
+*/
+
 class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {
@@ -73,30 +100,4 @@ public:
     }
 
 };
-/////////////////////////////////////////////////////////////////////
-/*
-Complexity: O()
 
-Algorithm:
-For every i, there isn't only one solution, there may be other solutions after you find one solution.
-Thus, you need to keep moving right and left when left < right
-Misunderstanding about the question:
-    when there are duplicate numbers, you just treat the solutions they involved in as one solution.
-    You shouldn't add duplicate solutions into result.
-
-Syntax:
-1. sort a vector: sort(v.begin(), v.end());
-2. check whether a vector contains the element: 
-    if(std::find(v.begin(), v.end(), x) != v.end()) {
-      //v contains x 
-    } else {
-      //v does not contain x 
-    }
-
-
-Test case:
-1. [0,0,0,0]
-2. when there are duplicate numbers in the vector
-
-
-*/
