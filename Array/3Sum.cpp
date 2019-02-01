@@ -2,7 +2,7 @@
 /*
 Complexity: O(n^2)
 
-Speed: Your runtime beats 9.95 % of cpp submissions.
+Speed: 1024 ms, faster than 12.55% of C++ online submissions for 3Sum.
 
 Algorithm:
 For every i, there isn't only one solution, there may be other solutions after you find one solution.
@@ -55,19 +55,9 @@ public:
             sum += nums.at(right);
             while(left < right){    
             //very important ! moving left and moving right can't be sequential, both sides should keep moving as long as left < right
-                while(sum >= 0 && right > left) {
-                    if(right > left && sum == 0) {      
-                    //put this part before you make any change to left or right. Otherwise, the first case is ignored.
-                        vector<int> solution;
-                        solution.push_back(nums.at(i));
-                        solution.push_back(nums.at(left));
-                        solution.push_back(nums.at(right));
-                        if(find(result.begin(), result.end(), solution) == result.end()) {
-                                result.push_back(solution);
-                        }
-                    }
+                while(sum > 0 && right > left) {
                     right--;
-                    sum = nums.at(i)+nums.at(left);
+                    sum -=nums.at(right+1);
                     sum += nums.at(right);
                     //debug
                     /*    cout<<"right ";
@@ -76,24 +66,29 @@ public:
                     */
                 }
 
-                while(sum <= 0 && left < right) {
-                    if(right > left && sum == 0) {  
-                        vector<int> solution;
-                        solution.push_back(nums.at(i));
-                        solution.push_back(nums.at(left));
-                        solution.push_back(nums.at(right));
-                        if(find(result.begin(), result.end(), solution) == result.end()) {
-                                result.push_back(solution);
-                        }
-                    }
+                while(sum < 0 && left < right) {
                     left++;
-                    sum = nums.at(i)+nums.at(left);
-                    sum += nums.at(right);   
+                    sum -=nums.at(left-1);
+                    sum += nums.at(left);   
                     //debug
                     /*    cout<<"left ";
                         cout<<nums.at(i)<<" "<<nums.at(left)<<" "<<nums.at(right)<<endl;
                         cout<<sum<<endl;
                     */
+                }
+                if(right > left && sum == 0) {      
+                    //put this part before you make any change to left or right. Otherwise, the first case is ignored.
+                        vector<int> solution;
+                        solution.push_back(nums.at(i));
+                        solution.push_back(nums.at(left));
+                        solution.push_back(nums.at(right));
+                        if(find(result.begin(), result.end(), solution) == result.end()) {
+                            result.push_back(solution);
+                        }
+                        right--;
+                        left++;
+                        sum = nums.at(i)+nums.at(left);
+                        sum += nums.at(right);
                 }
             }
         }
