@@ -4,9 +4,13 @@ Complexity: O(n^2)
 Runtime: 4 ms, faster than 100.00% of C++ online submissions for 3Sum Closest.
 Memory Usage: 766 KB, less than 87.03% of C++ online submissions for 3Sum Closest.
 
+Note
+Remember to return at the end of the function!
+
 Syntax:
 1. maximum int in C++: INT_MAX
 2. you can add more than 2 terms in a statement
+3. absolute value: abs()
 
 Test case:
 vector size < 3
