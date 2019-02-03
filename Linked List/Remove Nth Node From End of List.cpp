@@ -1,7 +1,10 @@
 /*
 Algorithm: O(n)
+
 Runtime: 4 ms, faster than 100.00% of C++ online submissions for Remove Nth Node From End of List.
 Memory Usage: 757.8 KB, less than 94.47% of C++ online submissions for Remove Nth Node From End of List.
+
+Note: How to do it in one pass?
 */
 ///////////////////////////////////////////////////////////////
 /**
@@ -44,3 +47,15 @@ public:
         return head;
     }
 };
+
+////////////////////////////////////////////////////////////
+//One pass algorithm
+/*
+The above algorithm could be optimized to one pass. Instead of one pointer, we could use two pointers. 
+The first pointer advances the list by n+1n+1 steps from the beginning, while the second pointer starts from the beginning of the list. 
+Now, both pointers are exactly separated by nn nodes apart. We maintain this constant gap by advancing both pointers together until the first pointer arrives past the last node. 
+The second pointer will be pointing at the nnth node counting from the last. 
+We relink the next pointer of the node referenced by the second pointer to point to the node's next next node.
+*/
+
+
