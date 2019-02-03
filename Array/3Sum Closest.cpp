@@ -21,7 +21,7 @@ vector size < 3
 class Solution {
 public:
     int threeSumClosest(vector<int>& nums, int target) {
-        	int left, right;
+          int left, right;
           int minDiff, diff;
           int sum, result;
           //address the corner case
