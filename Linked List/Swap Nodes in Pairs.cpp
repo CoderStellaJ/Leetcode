@@ -4,8 +4,6 @@ Memory Usage: 9 MB, less than 100.00% of C++ online submissions for Swap Nodes i
 
 Complexity: O(N)
 
-Note:
-
 Corner case:
 the linkedlist is empty, size is 1, size is 2 etc.
 
