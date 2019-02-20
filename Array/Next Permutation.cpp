@@ -1,6 +1,6 @@
 /*
-Runtime: 16 ms, faster than 69.53% of C++ online submissions for Next Permutation.
-Memory Usage: 10.2 MB, less than 40.55% of C++ online submissions for Next Permutation.
+Runtime: 12 ms, faster than 100.00% of C++ online submissions for Next Permutation.
+Memory Usage: 10.2 MB, less than 33.76% of C++ online submissions for Next Permutation.
 
 Complexity:O(N)
 
@@ -16,6 +16,7 @@ Note:
 For swapping, there are 2 cases:
 1. you find an element smaller than [k] and you swap [k] with [i-1]
 2. until the end of the vector, you can't find any element smaller than than [k], you swap [k] with [end]
+3. a return will slow down your program
 
 Syntax:
 1. reverse a vector: reverse(v.begin(), v.end()); 
@@ -47,7 +48,6 @@ public:
                         return;
                     }
                 }
-                return;
             }
         }
         reverse(nums.begin(), nums.end());  
