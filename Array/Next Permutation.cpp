@@ -1,10 +1,68 @@
 /*
 Runtime: 16 ms, faster than 69.53% of C++ online submissions for Next Permutation.
+Memory Usage: 10.2 MB, less than 40.55% of C++ online submissions for Next Permutation.
+
+Complexity:O(N)
+
+Improvement: 
+Algorithm 2:
+The trick is you don't have to sort [j...end]. It's garanteed that [j...end] is in decreasing order. 
+All you need to do is:
+1. Compare [j] and [j-1]
+2. Go back to find the element that is minimally larger than [j-1] and swap
+3. Reverse [j...end]
+
+Note:
+For swapping, there are 2 cases:
+1. you find an element smaller than [k] and you swap [k] with [i-1]
+2. until the end of the vector, you can't find any element smaller than than [k], you swap [k] with [end]
+
+Syntax:
+1. reverse a vector: reverse(v.begin(), v.end()); 
+
+*/
+
+///////////////////////////////////////////////////////////////////
+class Solution {
+public:
+    void nextPermutation(vector<int>& nums) {
+        int tmp;
+        if(nums.empty()) {return; }
+
+        for(int j = nums.size()-1; j>=1; j--) {		//O(N)
+            int k = j-1;
+            if(nums.at(j) > nums.at(k)) {
+                for(int i = j; i < nums.size(); i++) {
+                    if(nums.at(i) <= nums.at(k)) {
+                        tmp = nums.at(k);
+                        nums.at(k) = nums.at(i-1);
+                        nums.at(i-1) = tmp;
+                        reverse(nums.begin()+j,nums.end());        //O(N)
+                        return;
+                    }else if(i == nums.size()-1 && nums.at(i) > nums.at(k)) {
+                        tmp = nums.at(k);
+                        nums.at(k) = nums.at(i);
+                        nums.at(i) = tmp;
+                        reverse(nums.begin()+j,nums.end());
+                        return;
+                    }
+                }
+                return;
+            }
+        }
+        reverse(nums.begin(), nums.end());  
+    }
+
+};
+
+///////////////////////////////////////////////////////////////////////////
+/*
+Runtime: 16 ms, faster than 69.53% of C++ online submissions for Next Permutation.
 Memory Usage: 10.1 MB, less than 59.24% of C++ online submissions for Next Permutation.
 
-Complexity:O(N^2logN)
+Complexity: O(NlogN), not O(N^2logN) !! It's a fake loop, once you enter if(), you will end the loop.
 
-Algorithm:
+Algorithm 1:
 1. Try to find the min element in [j...end] that is larger than the current element [j-1].
 2. Swap [j-1] with min element [m]
 3. Sort [j...end]
