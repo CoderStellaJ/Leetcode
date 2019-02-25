@@ -1,4 +1,42 @@
+/*
+Runtime: 24 ms, faster than 100.00% of C++ online submissions for Permutations II.
+Memory Usage: 10.6 MB, less than 45.32% of C++ online submissions for Permutations II.
 
+Algorithm 2:
+How to avoid checking duplicates every time?
+1. generate permutations by swapping: the condition for swapping is important.
+2. sort the array before passing it into auxiliary function, during swapping, only larger numbers will be swapped.
+Otherwise, take [3,0,3,3] as example: after swapping, it becomes [0,3,3,3]. 
+But in the next iteration, there will be another swapping which changes it back to [3,0,3,3]
+
+Syntax: 
+std::swap(a, b);	//built-in function for swapping
+*/
+/////////////////////////////////////////////////////////////////////////////////
+class Solution {
+public:
+    vector<vector<int>> permuteUnique(vector<int>& nums) {
+        vector<vector<int>> ans;
+        sort(nums.begin(), nums.end());
+        per(nums, 0, nums.size()-1, ans);
+        return ans;       
+    }
+
+    void per(vector<int> nums, int start, int end, vector<vector<int>>& ans) {
+        if(start == end) {
+            ans.push_back(nums);
+            return;
+        }
+        for(int i = start; i <= end; i++) {
+            if(i != start && nums.at(i) == nums.at(start)) continue;	
+		//condition is important, i!= start to preseve the original sequence as a permutation
+            else{
+                swap(nums.at(i),nums.at(start));
+                per(nums,start+1,end,ans);
+            }
+        }
+    }
+};
 
 ///////////////////////////////////////////////////////////////////////////////////
 /*
