@@ -9,6 +9,9 @@ How to avoid checking duplicates every time?
 Otherwise, take [3,0,3,3] as example: after swapping, it becomes [0,3,3,3]. 
 But in the next iteration, there will be another swapping which changes it back to [3,0,3,3]
 
+Note:
+sorting is an important way to avoid duplication.
+
 Syntax: 
 std::swap(a, b);	//built-in function for swapping
 */
