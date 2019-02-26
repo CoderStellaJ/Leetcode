@@ -22,6 +22,57 @@ Insertion: O(1) expected, O(n) worst case
 Lookup: O(1) expected, O(n) worst case
 Deletion: O(1) expected, O(n) worst case
 */
+////////////////////////////////////////////////////////////////////////
+/*
+Runtime: 300 ms, faster than 6.73% of C++ online submissions for Group Anagrams.
+Memory Usage: 85.3 MB, less than 5.13% of C++ online submissions for Group Anagrams.
+
+Complexity: O(NK)
+Note: although the complexity is lower, the runtime is higher.
+
+Algorithm:
+To improve time complexity, we need to replace keys from sorted strings to another representation which only requires O(K)
+each string is only represented with 26 letters, so you can use a string which consists of each number of char the strings use as keys.
+e.g. {"#2#2#0#0...#0" : ["aab", "aba", "baa"]}
+*/
+/////////////////////////////////////////////////////////////////////////
+class Solution {
+public:
+    vector<vector<string>> groupAnagrams(vector<string>& strs) {
+        vector<vector<string>> ans;
+        map<string, vector<string>> mymap;
+        map<string,vector<string>>::iterator it;
+        string mykey;
+        for(int i = 0; i < strs.size(); i++) {
+            int alpha[26];
+            mykey = "";
+            for(int j = 0; j < 26; j++) {   
+                alpha[j] = 0;
+            }
+            for(int j = 0; j < strs[i].size(); j++) {       //O(K)
+                alpha[(strs[i][j]-'a')]++;
+            }
+            for(int j = 0; j < 26; j++) {
+                mykey = mykey + "#" + to_string(alpha[j]);
+            }
+            //cout<<mykey<<endl;
+            it = mymap.find(mykey);
+            if(it == mymap.end()) {
+            //the map doesn't contain the key
+                vector<string> myvalue;
+                myvalue.push_back(strs[i]);
+                mymap[mykey] = myvalue;
+            }else {
+            //the map alr has the key	
+                (it->second).push_back(strs[i]);
+            }  	
+        }
+        for(it = mymap.begin(); it != mymap.end(); it++) {
+            ans.push_back(it->second);
+        }
+        return ans;
+    }
+};
 /////////////////////////////////////////////////////////////////////////
 /*
 Runtime: 52 ms, faster than 86.65% of C++ online submissions for Group Anagrams.
@@ -30,7 +81,7 @@ Memory Usage: 20.5 MB, less than 45.34% of C++ online submissions for Group Anag
 Complexity:
 Time Complexity:O(NKlogK), where N is the length of strs, and K is the maximum length of a string in strs.
 
-Algorithm:
+Algorithm 1:
 use a map whose keys are sorted string, values are vectors of strings
 
 Syntax: 
