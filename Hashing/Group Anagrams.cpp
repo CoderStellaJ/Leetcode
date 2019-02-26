@@ -11,16 +11,30 @@ A hashtable can perform a lookup in O(1) time although that can degrade to O(N) 
 */
 /////////////////////////////////////////////////////////////////////////
 /*
-Runtime: 60 ms, faster than 49.42% of C++ online submissions for Group Anagrams.
-Memory Usage: 20.8 MB, less than 26.15% of C++ online submissions for Group Anagrams.
+Map:
+These are implemented using a red-black tree, a type of balanced binary search tree.
+Insertion: O(log n)
+Lookup: O(log n)
+Deletion: O(log n)
+
+Hashmap:
+Insertion: O(1) expected, O(n) worst case
+Lookup: O(1) expected, O(n) worst case
+Deletion: O(1) expected, O(n) worst case
+*/
+/////////////////////////////////////////////////////////////////////////
+/*
+Runtime: 52 ms, faster than 86.65% of C++ online submissions for Group Anagrams.
+Memory Usage: 20.5 MB, less than 45.34% of C++ online submissions for Group Anagrams.
 
 Complexity:
-O(NlogN)
+Time Complexity:O(NKlogK), where N is the length of strs, and K is the maximum length of a string in strs.
 
 Algorithm:
 use a map whose keys are sorted string, values are vectors of strings
 
-Syntax: Check whether a map contains a key
+Syntax: 
+1. Check whether a map contains a key
 map<int,Bar>::iterator it = m.find('2');
 Bar b3;
 if(it != m.end())
@@ -28,20 +42,21 @@ if(it != m.end())
    //element found;
    b3 = it->second;
 }
+2. hashmap in c++: unordered_map
 */
 //////////////////////////////////////////////////////////////////////////
 class Solution {
 public:
     vector<vector<string>> groupAnagrams(vector<string>& strs) {
         vector<vector<string>> ans;
-        map<string, vector<string>> mymap;
-        map<string,vector<string>>::iterator it;
+        unordered_map<string, vector<string>> mymap;
+        unordered_map<string,vector<string>>::iterator it;
         string mykey;
-        for(int i = 0; i < strs.size(); i++) {
+        for(int i = 0; i < strs.size(); i++) {     //O(N)
             mykey = strs[i];
-            sort(mykey.begin(), mykey.end());
-            it = mymap.find(mykey);
-            if(it == mymap.end()) {    //O(logN) implemented by tree
+            sort(mykey.begin(), mykey.end());      //O(KlogK)
+            it = mymap.find(mykey);                //O(1)
+            if(it == mymap.end()) {
             //the map doesn't contain the key
                 vector<string> myvalue;
                 myvalue.push_back(strs[i]);
