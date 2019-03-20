@@ -52,7 +52,7 @@ public:
         for(int i = 1; i < intervals.size(); ) {
             start2 = intervals[i].start;
             end2 = intervals[i].end;
-            if(end1 >= start2) {
+            if(end1 >= start2) {		// must add "="
                 if(end1 < end2) {		
                     intervals[k].end = end2;
                     end1 = end2;
