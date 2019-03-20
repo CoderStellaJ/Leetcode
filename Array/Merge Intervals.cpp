@@ -1,4 +1,7 @@
 /*
+Runtime: 204 ms, faster than 7.09% of C++ online submissions for Merge Intervals.
+Memory Usage: 11.1 MB, less than 13.19% of C++ online submissions for Merge Intervals.
+
 Complexity: O(NlogN)
 
 Algorithm 1:
@@ -17,6 +20,7 @@ And the function should be static function.
 
 Corner Case:
 1. the vector intervals is empty. For array/vector problem, always check whether it's empty before doing any operations.
+Otherwise, there will be Runtime Error
 */
 ////////////////////////////////////////////////////////////////////////
 /**
