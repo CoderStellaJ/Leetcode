@@ -1,3 +1,55 @@
+/*Runtime: 16 ms, faster than 78.25% of C++ online submissions for Merge Intervals.
+Memory Usage: 10.9 MB, less than 58.51% of C++ online submissions for Merge Intervals.
+
+Complexity: O(NlogN)
+
+Algorithm 2:
+Remove erase part in algorithm 1. Instead, return a new vector by pushing in proper intervals.
+myvec.erase is O(N)
+*/
+////////////////////////////////////////////////////////////////////////////
+/**
+ * Definition for an interval.
+ * struct Interval {
+ *     int start;
+ *     int end;
+ *     Interval() : start(0), end(0) {}
+ *     Interval(int s, int e) : start(s), end(e) {}
+ * };
+ */
+bool compareFunc(Interval a, Interval b) {
+    return a.start < b.start;
+}
+
+class Solution {
+public:
+    vector<Interval> merge(vector<Interval>& intervals) {
+        int k = 0;
+        if(intervals.empty()) return intervals;
+        int resEnd;
+        int start, end;
+        vector<Interval> res;
+        sort(intervals.begin(), intervals.end(), compareFunc);		//O(NlogN)
+        res.push_back(intervals[0]);
+        resEnd = res[0].end;
+        for(int i = 1; i < intervals.size(); i++) {
+            start = intervals[i].start;
+            end = intervals[i].end;
+            if(resEnd >= start) {
+                if(resEnd < end) {		
+                    res[k].end = end;
+                    resEnd = end;
+                }
+            }else {
+                k++;
+		res.push_back(intervals[i]);
+                resEnd = intervals[i].end;
+            }	
+    	}
+        return res;
+    }
+};
+///////////////////////////////////////////////////////////////////////////
 /*
 Runtime: 204 ms, faster than 7.09% of C++ online submissions for Merge Intervals.
 Memory Usage: 11.1 MB, less than 13.19% of C++ online submissions for Merge Intervals.
