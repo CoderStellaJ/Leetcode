@@ -14,7 +14,7 @@ for(int i = 0; i < rowCount; ++i)
 vector<int> v(N,val); // v[0:N-1] are all equal to val
 3. Create a 2D vector of certain size:
 vector<vector<int>> result(n,vector<int>(n));
-
+vector<vector<int>> result(n,vector<int>(n, 0));	//all initialized to 0
 */
 ///////////////////////////////////////////////////////////////////////////////////////
 class Solution {
