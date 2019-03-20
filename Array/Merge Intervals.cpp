@@ -36,14 +36,14 @@ class Solution {
 public:
     vector<Interval> merge(vector<Interval>& intervals) {
         int k = 0;
-	      if(intervals.empty()) return intervals;
+        if(intervals.empty()) return intervals;
         int start1, end1;
         int start2, end2;
         sort(intervals.begin(), intervals.end(), compareFunc);		//O(NlogN)
     	/*for(int j = 0; j < intervals.size(); j++) {
 	    	cout<<"["<<intervals[j].start<<","<<intervals[j].end<<"]"<<endl;
-	    }*/
-	      start1 = intervals[0].start;
+        }*/
+        start1 = intervals[0].start;
         end1 = intervals[0].end;
         for(int i = 1; i < intervals.size(); ) {
             start2 = intervals[i].start;
@@ -61,7 +61,7 @@ public:
                 end1 = intervals[k].end;
                 i++;
             }	
-	      }
+        }
         return intervals;
     }
 };
