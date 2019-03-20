@@ -1,7 +1,7 @@
 # Technical Interview
 Here is a summary of my experience in technical interviews.
 
-**How to answer coding questions** 
+### How to answer coding questions 
 
 1. Tell the interviewers your understanding of the question
 
