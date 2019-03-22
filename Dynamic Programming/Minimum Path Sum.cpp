@@ -41,6 +41,6 @@ public:
                 count[i][j] = std::min(std::min(sum1,sum2),count[i][j]);
             }
         }
-    return count[row-1][col-1];
+        return count[row-1][col-1];
     }
 };
