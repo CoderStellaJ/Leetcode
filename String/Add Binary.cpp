@@ -39,17 +39,17 @@ public:
             num1 = a[i] - '0';    
             num2 = b[i] - '0';
             sum = num1 + num2 + add;
-	          if(sum == 0) {
-		            add = 0;
+	    if(sum == 0) {
+	        add = 0;
                 ans = "0" + ans;    // new digit add in front
-	          }else if(sum == 1) {
+	    }else if(sum == 1) {
                 add = 0;
                 ans = "1" + ans;
             }else if(sum == 2) {
                 add = 1;
                 ans = "0" + ans;
             }else if(sum == 3) {
-		            add = 1;
+	        add = 1;
                 ans = "1" + ans;
             }
         }
@@ -59,6 +59,6 @@ public:
         if(ans == "") {
             return "0";
         }
-	  return ans;
+    return ans;
     }
 };
