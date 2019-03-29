@@ -2,6 +2,8 @@
 Runtime: 8 ms, faster than 68.20% of C++ online submissions for Add Binary.
 Memory Usage: 9.4 MB, less than 5.57% of C++ online submissions for Add Binary.
 
+Complexity: O(N)
+
 Algorithm: addition operation
 Note:
 when you are changing string length/vector size by adding or removing, you can't make it as the condition of loop
