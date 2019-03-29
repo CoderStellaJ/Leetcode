@@ -3,9 +3,16 @@ Runtime: 8 ms, faster than 68.20% of C++ online submissions for Add Binary.
 Memory Usage: 9.4 MB, less than 5.57% of C++ online submissions for Add Binary.
 
 Algorithm: addition operation
-
 Note:
+when you are changing string length/vector size by adding or removing, you can't make it as the condition of loop
+And digit needs to be added in front of the ans string 
 
+Syntax:
+1. convert string to int
+str - '0'
+
+Corner case:
+both strings are empty, ans is "", then return "0"
 */
 ////////////////////////////////////////////////////////////////////////////
 class Solution {
