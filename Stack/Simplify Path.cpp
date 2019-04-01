@@ -30,16 +30,16 @@ public:
                 }
             }else if(path[i] == '/'){
                 // "/"
-		        if(dirnow == true) {
-			        dir.push(dirname);
-			        dirnow = false;
-                    dirname = "";
-                }
-	        }else if(path[i] == '.' && (i==strlen-1 || (i!=strlen-1 && path[i+1] == '/'))) {
+		    if(dirnow == true) {
+			    dir.push(dirname);
+			    dirnow = false;
+			    dirname = "";
+                    }
+	    }else if(path[i] == '.' && (i==strlen-1 || (i!=strlen-1 && path[i+1] == '/'))) {
                 //"." do nothing
             }else{
                 //is some letter or "..."
-		        dirnow = true;
+		dirnow = true;
                 int j;
                 for(int j = i; j < strlen && path[j] != '/'; j++) {
                     dirname = dirname + path[j];
