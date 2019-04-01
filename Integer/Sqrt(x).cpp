@@ -6,9 +6,10 @@ Complexity: O(logN)
 
 Algorithm: binary search. When you want to find a number or answer, consider search algorithm
 
-Syntax:
-In recursion, you need to return something at the end of the function. 
+Note:
+1. In recursion, you need to return something at the end of the function. 
 Otherwise, there will be control reaches end error. 
+2. use long type to represent variables when the question potentially involve large number multiplications
 */
 ///////////////////////////////////////////////////////////////
 class Solution {
