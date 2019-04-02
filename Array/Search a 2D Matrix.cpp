@@ -9,7 +9,7 @@ Algorithm:
 compare each row's first element with target to determine which row it belongs to
 and use binary search to search in the row
 
-Syntax:
+Corner cases:
 1. About vector size:
 vector<vector<int>> matrix
 [] : matrix.empty() is true
