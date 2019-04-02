@@ -2,6 +2,8 @@
 Runtime: 4 ms, faster than 100.00% of C++ online submissions for Climbing Stairs.
 Memory Usage: 8.5 MB, less than 60.96% of C++ online submissions for Climbing Stairs.
 
+Complexity: O(N)
+
 Algorithm: dynamic programming, similar to Fibonacci number
 
 Note:
