@@ -2,7 +2,8 @@
 Runtime: 12 ms, faster than 98.45% of C++ online submissions for Search a 2D Matrix.
 Memory Usage: 9.7 MB, less than 100.00% of C++ online submissions for Search a 2D Matrix.
 
-Complexity: O(N^2)
+Complexity: O(k+logm)
+k is # rows, m is # cols
 
 Algorithm:
 compare each row's first element with target to determine which row it belongs to
