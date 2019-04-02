@@ -1,7 +1,11 @@
 /*
-Algorithm: 1-pass algorithm:
 
 Complexity:
+
+Algorithm2: 1-pass algorithm:
+
+Syntax:
+std::swap(a,b) is a c++ built-in function for swapping.
 
 */
 //////////////////////////////////////////////////////////////////////////////
@@ -13,7 +17,7 @@ Memory Usage: 8.6 MB, less than 55.43% of C++ online submissions for Sort Colors
 
 Complexity: O(N)
 
-Algorithm: 2-pass countign sort
+Algorithm1: 2-pass countign sort
 count number of 0 and 1 and 2
 */
 /////////////////////////////////////////////////////////////////////////////////
