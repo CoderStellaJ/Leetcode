@@ -2,6 +2,8 @@
 Runtime: 48 ms, faster than 99.43% of C++ online submissions for Set Matrix Zeroes.
 Memory Usage: 11.4 MB, less than 86.35% of C++ online submissions for Set Matrix Zeroes.
 
+Complexity: O(N^2)
+
 Algorithm:
 You scan through the whole 2D array, can't change the whole row/col to 0 once you find a 0.
 Because there are other elements in the same row/col that affect other rows and cols.
