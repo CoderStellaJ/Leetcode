@@ -1,7 +1,36 @@
 /*
+Runtime: 68 ms, faster than 90.35% of C++ online submissions for Combinations.
+Memory Usage: 11.7 MB, less than 94.70% of C++ online submissions for Combinations.
+
+Algorithm 2:Iterative method
+the latter number should be larger than the previous numbers.
+Once the last number reaches max n, we go back by 1 index and increase this number 
 */
 //////////////////////////////////////////////////////////////////////////////////
-
+class Solution {
+public:
+  vector<vector<int>> combine(int n, int k) {
+    vector<vector<int>> ans;
+    int i = 0;
+    if(k == 0) {
+        ans.push_back(vector<int>());
+        return ans;
+    }
+    vector<int> p(k,0);
+    while(i >= 0) {
+      p[i]++;
+      if(p[i] > n) {
+        i--;
+      }else if(i == k-1) {
+        ans.push_back(p);
+      }else{
+        i++;
+        p[i] = p[i-1];
+      }
+    }
+  return ans;
+  }
+};
 //////////////////////////////////////////////////////////////////////////////////
 /*
 Runtime: 192 ms, faster than 18.96% of C++ online submissions for Combinations.
