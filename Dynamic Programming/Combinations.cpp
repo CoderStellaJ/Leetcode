@@ -11,6 +11,10 @@ More base cases, less recursions, faster!
 When k < n
 Recursive relatioship: (n,k) = (n-1, k) + ((n-1, k-1)+[n])
 
+Note:
+When you push subanswer into ans, you need to loop through subanswers instead of directly pushing subanswer into ans.
+(Both of them are vector<vector<int>>)
+
 Corner case:
 if you directly return empty vector<vector<int>> ans, it will be [] instead of [[]].
 So, an empty vector<int> needs to be pushed into ans
