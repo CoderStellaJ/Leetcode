@@ -1,4 +1,16 @@
 /*
+
+
+Complexity: O(nk)
+
+Algorithm 2:
+To reduce duplicate computations in recursion, can use dynamic programming to store the subanswers
+
+*/
+//////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////////
+/*
 Runtime: 192 ms, faster than 18.96% of C++ online submissions for Combinations.
 Memory Usage: 68 MB, less than 13.63% of C++ online submissions for Combinations.
 
