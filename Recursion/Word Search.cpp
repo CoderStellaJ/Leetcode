@@ -9,6 +9,9 @@ Syntax:
 1. word.c_str()
 c_str returns a const char* that points to a null-terminated string (i.e. a C-style string). 
 It is useful when you want to pass the "contents" of an std::string to a function that expects to work with a C-style string.
+
+Summary:
+In recursion with auxiliary function, try to pass by reference instead of by value.
 */
 ///////////////////////////////////////////////////////////////////////////////////////////
 class Solution {
