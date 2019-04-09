@@ -1,4 +1,51 @@
 /*
+Runtime: 24 ms, faster than 97.29% of C++ online submissions for Word Search.
+Memory Usage: 10.1 MB, less than 97.85% of C++ online submissions for Word Search.
+
+Algorithm 3: same as algorithm 2
+instead of passing string by value, pass it by reference to avoid copying.
+
+Syntax:
+1. word.c_str()
+c_str returns a const char* that points to a null-terminated string (i.e. a C-style string). 
+It is useful when you want to pass the "contents" of an std::string to a function that expects to work with a C-style string.
+*/
+///////////////////////////////////////////////////////////////////////////////////////////
+class Solution {
+public:
+    bool exist(vector<vector<char>>& board, string word) {
+        //locate the staring point
+        if(board.empty()) return false;
+        if(word == "") return false;
+        for(int i = 0; i < board.size(); i++) {
+            for(int j = 0; j < board[0].size(); j++) {    //O(n^2)
+                if(check(board,i, j, word, 0) == true) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+  
+    bool check(vector<vector<char>>& board, int i, int j, string& word, int k) {
+        if(board[i][j] != word[k]){
+            return false;
+        }else if(k == word.length()-1){
+            return true;
+        }
+        board[i][j] = '#';
+        //check the 4 directions 
+        bool found = (i+1 < board.size()    && check(board, i+1, j, word, k+1)) ||
+                 (j+1 < board[0].size() && check(board, i, j+1, word, k+1)) ||
+                 (i-1 >= 0              && check(board, i-1, j, word, k+1)) ||
+                 (j-1 >= 0              && check(board, i, j-1, word, k+1));
+        board[i][j] = word[k];
+        return found;
+    }
+    
+};
+/////////////////////////////////////////////////////////////////////////////////////////
+/*
 Runtime: 256 ms, faster than 37.13% of C++ online submissions for Word Search.
 Memory Usage: 127.2 MB, less than 36.76% of C++ online submissions for Word Search.
 
