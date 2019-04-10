@@ -9,6 +9,8 @@ Algorithm 2: Less corner cases compared with algorithm 1
 2. iterate until no duplicate, then modify prev->next = cur->next
 3. Always consider the case when prev = NULL when head is changed.
 
+Note:
+don't forget the last element after stopping the while loop
 */
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
