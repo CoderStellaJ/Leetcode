@@ -1,4 +1,50 @@
 /*
+Runtime: 8 ms, faster than 100.00% of C++ online submissions for Subsets II.
+Memory Usage: 9.6 MB, less than 44.62% of C++ online submissions for Subsets II.
+
+Complexity: O(2^N)
+
+Algorithm 2:
+Similar to algorithm 1, but we don't use 2 vector<vector<int>> to separate apart the vectors 
+because moving vectors around takes lots of time.
+After observation, we can find that the vectors that add new elements in the last iteration are actually pushed at the back of ans.
+Thus, we can use difference in ans.size() to locate the part of the adding vectors.
+If the current number is not duplicate, the ans size of last iteration is set to 0.
+
+Syntax:
+std::sort(myvec.begin(), myvec.end())
+*/
+//////////////////////////////////////////////////////////////////////////////////////////////
+class Solution {
+public:
+    vector<vector<int>> subsetsWithDup(vector<int>& nums) {
+        sort(nums.begin(), nums.end());
+        vector<vector<int>> ans;
+        ans.push_back(vector<int>());
+        int count = 0;  
+        int tmp;
+        for(int i = 0; i < nums.size(); i++) {
+            tmp = ans.size();
+            vector<vector<int>> newvec;
+            if(i == 0 || nums[i] != nums[i-1]){
+                //no duplicate, the whole part needs to be copied and add a new element
+                count = 0;  
+            }
+            for(int j = count; j < tmp; j++) {
+                vector<int> add = ans[j];
+                add.push_back(nums[i]);
+                newvec.push_back(add);
+            }
+            for(vector<int>& vec:newvec) {
+                ans.push_back(vec);
+            }
+            count = tmp;
+        }
+        return ans;
+    }
+};
+/////////////////////////////////////////////////////////////////////////////////////////////////
+/*
 Runtime: 16 ms, faster than 31.18% of C++ online submissions for Subsets II.
 Memory Usage: 9.3 MB, less than 71.28% of C++ online submissions for Subsets II.
 
