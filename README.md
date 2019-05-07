@@ -2,6 +2,7 @@
 
 The questions are divided into different categories.:octocat: 
 - Array
+- Binary Tree
 - Dynamic Programming
 - Greedy Algorithm
 - Hashing 
