@@ -31,13 +31,11 @@ struct Comp{
             return (node1->val) > (node2->val);
         }
     }; 
-
-*/
-
+    
 Corner case:
 1. lists is NULL
 2. any one of the ListNode* is NULL
-
+*/
 ////////////////////////////////////////////////////////////////////////////////////
 /**
  * Definition for singly-linked list.
