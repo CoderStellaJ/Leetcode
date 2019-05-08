@@ -1,10 +1,68 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+/*
+Runtime: 88 ms, faster than 100.00% of C++ online submissions for 3Sum.
+Memory Usage: 14.8 MB, less than 98.90% of C++ online submissions for 3Sum.
+
+Complexity:
+O(N^2)
+
+Algorithm 2:
+improvement from Algorithm 1:
+the way to avoid 3 types of duplications
+
+Note:
+1.push nums[k] instead of k into vector
+2. remember to return at the end of the function
+
+Syntax:
+1. push a vector into another vector without creating an extra vector
+res.push_back({nums[i],nums[front],nums[back]})
+*/
+///////////////////////////////////////////////////////////////////////////////////////////
+class Solution {
+public:
+    vector<vector<int>> threeSum(vector<int>& nums) {
+        vector<vector<int>> res;
+        int len = nums.size();
+        int front, back, target, sum;
+        sort(nums.begin(), nums.end());
+        for(int i = 0; i < len; i++) {
+            front = i+1;
+            back = len-1;
+            target = -nums[i];
+            if(target < 0) break;       //the latter numbers are all positive
+            while(front < back) {
+                sum = nums[front] + nums[back];
+                if(sum > target){       //use if instead of while, using while means there is a sequence, but actually it's not
+                    back--;
+                    continue;
+                }
+                if(sum < target) {
+                    front++;
+                    continue;
+                }
+                //sum == target
+                res.push_back({nums[i],nums[front],nums[back]});
+                //check duplicate[1]
+                while(front+1 < len && nums[front+1] == nums[front]) front++;	//better way to avoid duplication 
+                //check duplicate[2]
+                while(back-1>=0 && nums[back-1] == nums[back]) back--;		//saves lots of time
+                front++;
+            }
+            //check diplicate [0]
+            while(i+1 < len && nums[i+1]==nums[i]) i++;		//3 kinds of duplications to avoid
+        }
+        return res;
+    }
+};
+
 /////////////////////////////////////////////////////////////////////
 /*
 Complexity: O(n^2)
 
 Speed: 1024 ms, faster than 12.55% of C++ online submissions for 3Sum.
 
-Algorithm:
+Algorithm 1:
 For every i, there isn't only one solution, there may be other solutions after you find one solution.
 Thus, you need to keep moving right and left when left < right
 Misunderstanding about the question:
