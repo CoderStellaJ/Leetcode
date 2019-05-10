@@ -1,0 +1,5 @@
+# Basic Types
+
+### Integer
+
+### String
