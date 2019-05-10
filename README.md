@@ -2,11 +2,11 @@
 
 The questions are divided into different categories.:octocat: 
 - Array
+- Basic Types
 - Binary Tree
 - Dynamic Programming
 - Greedy Algorithm
 - Hashing 
-- Integer
 - Linked List
 - Recursion
 - Stack
