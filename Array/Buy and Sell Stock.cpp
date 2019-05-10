@@ -1,5 +1,40 @@
 /*
 Runtime: 8 ms, faster than 98.70% of C++ online submissions for Best Time to Buy and Sell Stock.
+Memory Usage: 9.7 MB, less than 8.75% of C++ online submissions for Best Time to Buy and Sell Stock.
+
+Complexity:
+Runtime: O(N)
+Space: O(1)
+
+Algorithm 3:
+To improve space complecity:
+maximum profit = prices[i] - min(so far)
+So we just need to keep the min of the previous elements
+
+Note:
+before accessing any element of the vector, check whether it's empty
+*/
+//////////////////////////////////////////////////////////////////////////////////////
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {
+        int len = prices.size();
+        if(len == 0) return 0;      //before accessing the first element!
+        int min = prices[0];
+        int maxpro = 0;
+        for(int i = 0; i < len; i++) {
+            if(prices[i] <= min) {
+                min = prices[i];
+                continue;
+            }
+            if(prices[i]-min > maxpro) maxpro = prices[i]-min;
+        }
+        return maxpro;
+    }
+};
+//////////////////////////////////////////////////////////////////////////////////////////
+/*
+Runtime: 8 ms, faster than 98.70% of C++ online submissions for Best Time to Buy and Sell Stock.
 Memory Usage: 9.8 MB, less than 5.08% of C++ online submissions for Best Time to Buy and Sell Stock.
 
 Complexity:
