@@ -25,7 +25,7 @@ class Solution {
           while(j < nums.length && nums[j] == 0){
             j++;
           }
-          if(j >= nums.length) return;``//check which condition is violated before accessing the element
+          if(j >= nums.length) return;      //check which condition is violated before accessing the element
           tmp = nums[j];
           nums[j] = nums[i];
           nums[i] = tmp;
