@@ -1,4 +1,7 @@
 /*
+Runtime: 20 ms, faster than 97.12% of C++ online submissions for Top K Frequent Elements.
+Memory Usage: 11.7 MB, less than 15.75% of C++ online submissions for Top K Frequent Elements.
+
 Complexity:
 Runtime: O(Nlogk)
 Space: O(N)
