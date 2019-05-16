@@ -15,6 +15,7 @@ a⊕b⊕a=(a⊕a)⊕b=0⊕b=b
 
 Syntax:
 ^ in Java is the exclusive-or ("xor") operator.
+^ is bitwise XOR
 */
 /////////////////////////////////////////////////////////////////////////////
 class Solution {
