@@ -4,6 +4,7 @@ Memory Usage: 32.4 MB, less than 91.82% of Java online submissions for Pow(x, n)
 
 Algorithm 2:
 Recursion
+and using half*half instead of multiplying x in each iteration can largely reduce the number of iterations and save time.
 */
 //////////////////////////////////////////////////////////////////////////////////
 class Solution {
