@@ -24,11 +24,10 @@ And for each question, the solutions have the following parts:
 <br/> 10	Regular Expression Matching  - Complexity Analysis for algo 1
 <br/> 273	Integer to English Words
 <br/> 564 Find the Closest Palindrome
+<br/> 91  Decode Ways last algorithm
 
 # Questions with slow algorithm
 <br/> 65	Valid Number
 <br/> 297	Serialize and Deserialize Binary Tree
 <br/> 76	Minimum Window Substring
 <br/> 151	Reverse Words in a String
-<br/> 
-
