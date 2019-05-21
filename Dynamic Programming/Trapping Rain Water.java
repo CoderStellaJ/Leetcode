@@ -1,4 +1,51 @@
+/*
+Runtime: 1 ms, faster than 99.77% of Java online submissions for Trapping Rain Water.
+Memory Usage: 35.5 MB, less than 99.98% of Java online submissions for Trapping Rain Water.
 
+Complexity:
+runtime: O(N)
+space: O(1)
+
+Algorithm 3:
+as long as right_max[i]>left_max[i], the water trapped depends upon the left_max, 
+and similar is the case when left_max[i]>right_max[i]. 
+So, we can say that if there is a larger bar at one end (say right), 
+we are assured that the water trapped would be dependant on height of bar in current direction (from left to right). 
+As soon as we find the bar at other end (right) is smaller, we start iterating in opposite direction (from right to left). 
+We must maintain left_max and right_max during the iteration, but now we can do it in one iteration using 2 pointers, 
+switching between the two.
+
+Syntax:
+1. initialize variable:
+int right = 0, left = 0;        //can be written in 1 line
+
+Corner case:
+[2,0,2] ans = 2
+*/
+/////////////////////////////////////////////////////////////////////////////////////
+class Solution {
+    public int trap(int[] height) {
+      int ind_left = 0, ind_right = height.length-1;
+      int ans = 0;
+      int max_left = 0, max_right = 0;
+      while(ind_left <= ind_right) {        //should be <= for edge case [2,0,2]
+        if(max_left <= max_right) {
+          if(height[ind_left] >= max_left) max_left = height[ind_left];
+          else {
+            ans += max_left - height[ind_left];
+          }
+          ind_left++;
+        }else {
+          if(height[ind_right] >= max_right) max_right = height[ind_right];
+          else {
+            ans += max_right - height[ind_right];
+          }
+          ind_right--;
+        }
+      }
+      return ans;
+    }
+}
 ///////////////////////////////////////////////////////////////////////////////////////
 /*
 Runtime: 6 ms, faster than 55.81% of Java online submissions for Trapping Rain Water.
