@@ -25,6 +25,7 @@ And for each question, the solutions have the following parts:
 <br/> 273	Integer to English Words
 <br/> 564 Find the Closest Palindrome
 <br/> 91  Decode Ways last algorithm
+<br/> 535	Encode and Decode TinyURL
 
 # Questions with slow algorithm
 <br/> 65	Valid Number
