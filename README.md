@@ -27,6 +27,7 @@ And for each question, the solutions have the following parts:
 <br/> 535	Encode and Decode TinyURL
 <br/> 297	Serialize and Deserialize Binary Tree
 <br/> 25	Reverse Nodes in k-Group
+<br/> 224	Basic Calculator
 
 # Questions with slow algorithm
 <br/> 65	Valid Number
