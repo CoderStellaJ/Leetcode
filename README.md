@@ -28,6 +28,8 @@ And for each question, the solutions have the following parts:
 <br/> 297	Serialize and Deserialize Binary Tree
 <br/> 25	Reverse Nodes in k-Group
 <br/> 224	Basic Calculator
+<br/> 124	Binary Tree Maximum Path Sum
+<br/> 301	Remove Invalid Parentheses
 
 # Questions with slow algorithm
 <br/> 65	Valid Number
