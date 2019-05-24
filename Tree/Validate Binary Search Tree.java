@@ -2,6 +2,10 @@
 Runtime: 0 ms, faster than 100.00% of Java online submissions for Validate Binary Search Tree.
 Memory Usage: 37.3 MB, less than 99.07% of Java online submissions for Validate Binary Search Tree.
 
+Copmlexity:
+runtime: O(N)       //go through each node once
+space: O(N)         //stack for recursion
+
 Algorithm: Recursion
 with 2 auxiliary functions to get the min and max values of root.right.left and root.left.right
 
