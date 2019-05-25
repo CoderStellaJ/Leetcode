@@ -12,6 +12,7 @@ a⊕0=a
 If we take XOR of two same bits, it will return 0
 a⊕a=0
 a⊕b⊕a=(a⊕a)⊕b=0⊕b=b
+Proof: https://zhidao.baidu.com/question/486016726.html
 
 Syntax:
 ^ in Java is the exclusive-or ("xor") operator.
