@@ -22,7 +22,6 @@ And for each question, the solutions have the following parts:
 
 # Questions in progress
 <br/> 10	Regular Expression Matching  - Complexity Analysis for algo 1
-<br/> 564 Find the Closest Palindrome
 <br/> 535	Encode and Decode TinyURL
 <br/> 297	Serialize and Deserialize Binary Tree
 <br/> 25	Reverse Nodes in k-Group
