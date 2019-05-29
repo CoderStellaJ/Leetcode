@@ -76,14 +76,14 @@ class Solution {
                     prev = cur;
                     cur = nextnode;
                 }
-        	}
-        	end = prev;
-        	//link the groups
-        	if(prevend == null){
-        		head = end;
-        	}else{
-        		prevend.next = end;
-        	}
+            }
+            end = prev;
+            //link the groups
+            if(prevend == null){
+                head = end;
+            }else{
+                prevend.next = end;
+            }
             start.next = cur;
             //prepare for the next group
             prevend = start;
@@ -92,17 +92,17 @@ class Solution {
             start = cur;
         }
         return head;
-    }
+        }
     
     public boolean checkgroup(ListNode cur, int k){
-    	//inside, changes won't affect cur in caller
-    	boolean group = false;
-    	for(int i = 0; i < k; i++) {
-        	if(cur == null) return false;
-        	else {
-        		if(i == k-1) group = true;
-        		cur = cur.next;
-        	}
+        //inside, changes won't affect cur in caller
+        boolean group = false;
+        for(int i = 0; i < k; i++) {
+            if(cur == null) return false;
+            else {
+                if(i == k-1) group = true;
+                cur = cur.next;
+            }
         }
         return group;
     }
