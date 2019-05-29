@@ -68,13 +68,13 @@ class Solution {
             //reverse the group
         	  for(count = 1;count <= k; count++){
                 if(prev == null){
-                	prev = cur;
-                	cur = cur.next;
+                    prev = cur;
+                    cur = cur.next;
                 }else{
-                	nextnode = cur.next;
-                  cur.next = prev;
-                  prev = cur;
-                  cur = nextnode;
+                    nextnode = cur.next;
+                    cur.next = prev;
+                    prev = cur;
+                    cur = nextnode;
                 }
         	}
         	end = prev;
@@ -84,12 +84,12 @@ class Solution {
         	}else{
         		prevend.next = end;
         	}
-        	start.next = cur;
-        	//prepare for the next group
-        	prevend = start;
-        	prev = null;		//initialized to null for every group
-          group = checkgroup(cur, k);
-        	start = cur;
+                start.next = cur;
+                //prepare for the next group
+                prevend = start;
+                prev = null;		//initialized to null for every group
+                group = checkgroup(cur, k);
+                start = cur;
         }
         return head;
     }
