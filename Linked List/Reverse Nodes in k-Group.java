@@ -92,7 +92,7 @@ class Solution {
             start = cur;
         }
         return head;
-        }
+    }
     
     public boolean checkgroup(ListNode cur, int k){
         //inside, changes won't affect cur in caller
