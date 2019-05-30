@@ -1,4 +1,55 @@
 /*
+Runtime: 21 ms, faster than 40.54% of Java online submissions for Basic Calculator II.
+Memory Usage: 36.6 MB, less than 92.76% of Java online submissions for Basic Calculator II.
+
+Complexity:
+runtime: O(N)
+space: O(1)
+
+Algorithm 2: String without Stack
+To solve the problem in Algorithm 2 and improve space efficiency,
+Note: we need to process * or / part first before adding it to the final result.
+So we use pre to represent the partial result of * and /
+And v is the current value;
+sum is the final answer to be returned.
+
+Note: The hard part of the algorithm is to extract the number part.
+1. This algorithm focuses on the operator before the operand. Otherwise without the second operand, you can't do the operation.
+2. For the first number, there isn't any previous operand. So, extracting it would be a special case.
+   To unify everything, end should be initialized to -1.
+*/
+/////////////////////////////////////////////////////////////////////////////////////////////
+class Solution {
+    public int calculate(String s) {
+        s = s.replaceAll(" ","");
+        int sum=0, pre=0, v=0;
+        int start=0, end=-1;	//for single value      //end initialized to 1
+        while(end < s.length()) {
+            start = ++end;
+        	//get value v
+        	while(end < s.length() && Character.isDigit(s.charAt(end))) end++;
+        	v = Integer.parseInt(s.substring(start,end));
+        	//get operator
+        	if(start!=0){
+        		char c = s.charAt(start-1); //operator
+        		if(c == '*' || c == '/'){
+        			sum-=pre;
+        			if(c == '*') pre*=v;
+        			else pre/=v;
+        		}else if(c == '+' || c == '-') {
+        			if(c == '-') v = -v;
+        			pre = v;
+                }
+        	}else {
+        		pre = v;
+        	}
+        	sum += pre;
+        }
+        return sum;
+    }
+}
+///////////////////////////////////////////////////////////////////////////////////////////////
+/*
 Complexity: 
 runtime: O(N)
 space: O(N)
@@ -6,7 +57,6 @@ space: O(N)
 Algorithm 2: 1 Stack
 Instead of using 2 stacks to reverse the sequence, we can loop through the string from the end to start and use 1 stack only.
 But this algorithm has 1 problem: 5/2*6, it cannot start * first
-
 */
 //////////////////////////////////////////////////////////////////////////////////////////////
 /*
