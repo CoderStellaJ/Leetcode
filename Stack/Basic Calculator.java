@@ -1,9 +1,15 @@
 /*
 Runtime: 73 ms, faster than 9.64% of Java online submissions for Basic Calculator.
 Memory Usage: 47.5 MB, less than 9.24% of Java online submissions for Basic Calculator.
+
+Complexity:
+runtime: O(N)
+space: O(N)
+
 Algorithm 1: 2 Stacks
 mystack is used to process ( and )
 and inside ( and ) we pop out mystack into op stack to get the correct sequence and do the operation
+
 Note: 
 1. the problem is the same as in Basic Calculator II which is to extract numbers
 note when s.charAt(i) is digit, initialize end to i+1 first
