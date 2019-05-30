@@ -27,7 +27,6 @@ And for each question, the solutions have the following parts:
 <br/> 124	Binary Tree Maximum Path Sum
 <br/> 301	Remove Invalid Parentheses
 <br/> 72	Edit Distance
-<br/> 227	Basic Calculator II
 
 # Questions with slow algorithm
 <br/> 65	Valid Number
