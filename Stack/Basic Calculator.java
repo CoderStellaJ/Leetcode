@@ -1,4 +1,16 @@
 /*
+Comparison with Basic Calculator II.java
+Basic Calculator: 
+1. use recursion to adjust the sequence to calculate the part in () first
+2. consider the operator after the number and use sign to record it.
+Basic Calculator II:
+1. use pre variable to adjust the sequence to calculate * and / first
+    num-pre; pre*v; num+pre;
+    We can't use this method in Basic Calculator because with bracket, the whole previous part need to be remembered
+2. consider the operator before the value so that yo can get 2 values at a time and do the operation
+*/
+//////////////////////////////////////////////////////////////////////////////////////
+/*
 Runtime: 5 ms, faster than 94.72% of Java online submissions for Basic Calculator.
 Memory Usage: 38.7 MB, less than 93.27% of Java online submissions for Basic Calculator.
 
