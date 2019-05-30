@@ -1,4 +1,66 @@
 /*
+Runtime: 5 ms, faster than 94.72% of Java online submissions for Basic Calculator.
+Memory Usage: 38.7 MB, less than 93.27% of Java online submissions for Basic Calculator.
+
+Complexity:
+runtime: O(N)
+space: O(1)
+
+Algorithm 2: Recursion without Stack
+1. a helper function returning an array whose first value is the result and the second value is the next start index
+2. The logic is that it always considers the number and the operator after it which is different from stack
++ and - are recorded using sign
+num is expanded to multiple digits using *10 + digit
+( recursion; ) stop recursion;
+
+Syntax:
+1. return multiple elements: return an array
+public int[] helper(String s, int start){}
+return new int[]{result+num*sign, index};
+2. convert char to int: c-'0'
+*/
+///////////////////////////////////////////////////////////////////////////////////
+class Solution {
+    public int calculate(String s) {
+        s = s.replaceAll(" ","");
+        return helper(s,0)[0];
+    }
+    //first index is the int reault and the second result is the next start
+    public int[] helper(String s, int start){
+    	int num=0, sign=1, result=0, index=start;
+    	while(index < s.length()){
+    		char c = s.charAt(index++);
+    		if(Character.isDigit(c)){
+    			num = num*10+(c-'0');       //with bracket directly convert char to int
+    		}
+    		if(c == '('){
+    			int[] tmp = helper(s,index);
+    			index = tmp[1];
+    			result += tmp[0]*sign;
+    		}else if(c == ')'){
+    			break;
+    		}else if(c == '+'){
+    			result += sign*num;     //important
+    			sign = 1;
+    			num = 0;
+    		}else if(c == '-'){
+    			result += sign*num;
+    			sign = -1;
+    			num = 0;
+    		}
+
+    	}
+    	return new int[]{result+num*sign, index};       //plus the last num
+    }
+}
+
+// int main(){
+// 	Solution mysol = new Solution();
+// 	System.out.println(mysol.calculate(" 3"));
+// }
+
+///////////////////////////////////////////////////////////////////////////////////
+/*
 Runtime: 73 ms, faster than 9.64% of Java online submissions for Basic Calculator.
 Memory Usage: 47.5 MB, less than 9.24% of Java online submissions for Basic Calculator.
 
