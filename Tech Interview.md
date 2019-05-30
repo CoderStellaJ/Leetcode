@@ -20,3 +20,9 @@ Here is a summary of my experience in technical interviews.
 8. Find restrictions in your algorithm and come up with the second method 
 
 9. Repeat steps 3 to 7
+
+### Good habits when coding
+
+1. Write some auxiliary comments to help yourself figure out what functionality you want to achieve in this section
+
+2. build large skeletal structure first before going into the details
