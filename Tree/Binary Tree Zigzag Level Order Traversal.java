@@ -10,6 +10,7 @@ Algorithm:
 1. hashmap: store treenode and its level
 2. queue: record sequence for BFS searching (This sequence is the answer list sequence)
 3. stack: reverse the sequence of current level to make sure the sequence of the next level is correct.
+Note: simply use a queue is not enough for case: [1,2,3,4,null,null,5]
 
 syntax:
 1. create a list in java
