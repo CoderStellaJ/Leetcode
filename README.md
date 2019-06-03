@@ -20,14 +20,15 @@ And for each question, the solutions have the following parts:
 - Syntax 
 - Corner cases
 
-# Questions in progress
+# Skipped Questions
 <br/> 10	Regular Expression Matching  - Complexity Analysis for algo 1
 <br/> 535	Encode and Decode TinyURL
 <br/> 124	Binary Tree Maximum Path Sum
 <br/> 301	Remove Invalid Parentheses
 <br/> 72	Edit Distance
 <br/> 269	Alien Dictionary
-<br/> 158	Read N Characters Given Read4 II - Call multiple times
+<br/> 158	Read N Characters Given Read4 II - Call multiple times]
+<br/> 336 Palindrome Pairs
 
 # Questions with slow algorithm
 <br/> 65	Valid Number
