@@ -1,5 +1,10 @@
 /*
+Runtime: 4 ms, faster than 96.12% of Java online submissions for Word Break II.
+Memory Usage: 35.9 MB, less than 99.85% of Java online submissions for Word Break II.
 
+Dynamic Programming is the way to avoid solving the same subproblem again.
+In this case, the subproblem is about substirng s.
+To avoid this, we are inspired to use a hashmap to store the subproblems and results we have solved.
 
 Algorithm 4: HashMap + Recursion
 The key part to save time is to avoid solving the same subproblem over and over again.
@@ -10,6 +15,37 @@ Syntax:
 1. mystr.startsWith(mystr);
 */
 ////////////////////////////////////////////////////////////////////////////////////////
+class Solution {
+    public List<String> wordBreak(String s, List<String> wordDict) {
+      Map<String, List<String>> mymap = new HashMap<String, List<String>>();
+      //list[i] subproblem from 0 to i
+      mymap.put("",new ArrayList<String>());
+      helper(s, wordDict, mymap);
+      return mymap.get(s);
+    }
+  
+    public List<String> helper(String s, List<String> wordDict, Map<String, List<String>> mymap) {
+      List<String> mylist = new ArrayList<String>();
+      if(s == "") return mylist;
+      if(mymap.containsKey(s)) return mymap.get(s);
+      
+      for(int i = 0; i < wordDict.size(); i++) {
+        String cur = wordDict.get(i);
+        int len = cur.length();
+        if(s.startsWith(cur)) {
+          if(len == s.length()) mylist.add(cur);
+          else {
+            List<String> tmp = helper(s.substring(len), wordDict, mymap);
+            for(int j=0; j < tmp.size(); j++) {
+              mylist.add(cur+" "+tmp.get(j));
+            } 
+          }
+        }
+      }
+      mymap.put(s, mylist);
+      return mylist;
+    }
+}
 /////////////////////////////////////////////////////////////////////////////////////////
 /*
 Time Limit Exceeded:
