@@ -6,12 +6,14 @@ Complexity: O(N)
 
 Algorithm 3:
 Greedy algorithm:
+It starts from the end node and test which are the nodes that can jump to the end
+
 For the inner loop in algorithm 2, you don't have to test one by one how many steps to go.
 As long as the largest step can land in some position, there must be a smaller step which can help to reach the end.
 And the specific condition is the position > leftmost G pos which can reaches the end.
 
 Summary:
-simpler algorithm means you push yoursekf to ignore some unimportant details in your logic
+simpler algorithm means you push yourself to ignore some unimportant details in your logic
 And generalize it to capture important info which finalizes the result.
 
 Everytime when you want to improve your algorithm: try to reduce the loops in your code
