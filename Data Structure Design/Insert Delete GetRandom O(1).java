@@ -20,6 +20,7 @@ Syntax:
 java.util.Random.nextInt(n): generate random number [0,n)
 Random random = new Random();
 random.nextInt(x);
+5. In coderpad, the class sohuld always be Solution
 */
 ///////////////////////////////////////////////////////////////////////////////////////
 class RandomizedSet {
@@ -49,10 +50,10 @@ class RandomizedSet {
             int last = list.size()-1;
             if(position!=last) {
                 int value = list.get(last);
-                list.set(position , value);
+                list.set(position , value);     //swap with the last element in the list
                 map.put(value,position);
             }
-            list.remove(last);
+            list.remove(last);      //O(1)
             map.remove(val);
             return true;
         }
