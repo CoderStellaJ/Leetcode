@@ -26,20 +26,18 @@ public:
 		suc[i] = false;
 	}
 	suc[nums.size()-1] = true;
-    for(int i = nums.size()-1; i >= 0; i--) {
+	for(int i = nums.size()-1; i >= 0; i--) {
 		if(i+nums[i] < leftmost) {
 			suc[i] = false;
 		}else {
 			suc[i] = true;
-            leftmost = i;
+			leftmost = i;
 		}
 	}
 	if(suc[0] == true) return true;
 	return false;
-    }
-
+	}
 };
-
 /////////////////////////////////////////////////////////////////////////
 /*
 Runtime: 640 ms, faster than 22.03% of C++ online submissions for Jump Game.
