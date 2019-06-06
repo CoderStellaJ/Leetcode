@@ -36,4 +36,4 @@ And for each question, the solutions have the following parts:
 <br/> 151	Reverse Words in a String
 <br/> 297	Serialize and Deserialize Binary Tree
 <br/> 127	Word Ladder
-
+<br/> 295	Find Median from Data Stream
