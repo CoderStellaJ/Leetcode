@@ -29,6 +29,7 @@ And for each question, the solutions have the following parts:
 <br/> 269	Alien Dictionary
 <br/> 158	Read N Characters Given Read4 II - Call multiple times]
 <br/> 336 Palindrome Pairs
+<br/> 341	Flatten Nested List Iterator
 
 # Questions with slow algorithm
 <br/> 65	Valid Number
