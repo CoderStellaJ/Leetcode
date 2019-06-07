@@ -4,6 +4,8 @@ Memory Usage: 32.5 MB, less than 98.86% of Java online submissions for Clone Gra
 
 Algorithm 2: DFS
 optimize to 1 iteration for each node
+helper function returns the copy of the current node
+
 Note:
 push node into the map before going into the next level, other wise, it's dead loop
 */
