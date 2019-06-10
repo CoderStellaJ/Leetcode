@@ -26,7 +26,6 @@ And for each question, the solutions have the following parts:
 <br/> 124	Binary Tree Maximum Path Sum
 <br/> 301	Remove Invalid Parentheses
 <br/> 72	Edit Distance
-<br/> 269	Alien Dictionary
 <br/> 336 Palindrome Pairs
 <br/> 341	Flatten Nested List Iterator
 
