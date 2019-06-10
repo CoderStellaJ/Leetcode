@@ -30,7 +30,5 @@ And for each question, the solutions have the following parts:
 
 # Questions with slow algorithm
 <br/> 65	Valid Number
-<br/> 76	Minimum Window Substring
-<br/> 151	Reverse Words in a String
 <br/> 297	Serialize and Deserialize Binary Tree
 <br/> 127	Word Ladder
