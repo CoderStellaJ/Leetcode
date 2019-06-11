@@ -23,7 +23,6 @@ And for each question, the solutions have the following parts:
 # Skipped Questions
 <br/> 10	Regular Expression Matching  - Complexity Analysis for algo 1
 <br/> 535	Encode and Decode TinyURL
-<br/> 124	Binary Tree Maximum Path Sum
 <br/> 301	Remove Invalid Parentheses
 <br/> 336 Palindrome Pairs
 <br/> 341	Flatten Nested List Iterator
