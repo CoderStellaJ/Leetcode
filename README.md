@@ -26,6 +26,7 @@ And for each question, the solutions have the following parts:
 <br/> 301	Remove Invalid Parentheses
 <br/> 336 Palindrome Pairs
 <br/> 341	Flatten Nested List Iterator
+<br/> 722	Remove Comments
 
 # Questions with slow algorithm
 <br/> 65	Valid Number
