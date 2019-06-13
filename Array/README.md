@@ -1,4 +1,6 @@
 # Array
+### Things to consider
+1. Observe the type of the elements you are going to store in some data structure, and then determine whether array is suitable.
 
 ### Corner Cases
 1. myarr.length: Check whether the vector is empty before accessing any element
