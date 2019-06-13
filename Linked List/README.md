@@ -6,6 +6,11 @@
 - two elements in the list
 - more than three elements
 
+<br/> For sorting problems 
+- ascending order
+- descending order
+- random sequence
+
 ### Things to note
 1. cur->next
 Also consider the case that cur is NULL
