@@ -8,6 +8,9 @@ We normally can transform recursion to iterations by using queue or stack
 Note: 
 Here, it's better to use a queue.
 Using a stack makes it bottom-up and takes lots of time
+
+Syntax:
+We can offer a null object into queue or stack
 */
 ///////////////////////////////////////////////////////////////////////////////////////
 /**
