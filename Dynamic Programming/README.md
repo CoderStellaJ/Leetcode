@@ -7,6 +7,9 @@ So the most important thing in designing a DP is to think about:
 - What is the subproblem? How do we represent it?
   - s.substring(i,j)
   - s.substring(i)
+- What kind of information are we going to store?
+  - answer of subproblem
+  - some other element needed for answer
 - How to store it?
   - array
   - hashmap
