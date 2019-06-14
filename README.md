@@ -31,6 +31,8 @@ And for each question, the solutions have the following parts:
 <br/> 207	Course Schedule
 <br/> 68	Text Justification
 <br/> 208	Implement Trie (Prefix Tree)
+<br/> 468 Validate IP Address
+<br/> 195	Tenth Line
 
 # Questions with slow algorithm
 <br/> 65	Valid Number
