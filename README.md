@@ -27,6 +27,7 @@ And for each question, the solutions have the following parts:
 <br/> 336 Palindrome Pairs
 <br/> 341	Flatten Nested List Iterator
 <br/> 722	Remove Comments
+<br/> 207	Course Schedule
 
 # Questions with slow algorithm
 <br/> 65	Valid Number
