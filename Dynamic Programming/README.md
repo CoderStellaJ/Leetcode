@@ -15,3 +15,5 @@ How to write down that relationship equation:
 - How to store it?
   - array
   - hashmap
+- Iteration sequence?
+  - taking the right element as the outer loop can help you reduce the dimension of sp array
