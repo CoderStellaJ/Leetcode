@@ -3,12 +3,13 @@
 The questions are divided into different categories.:octocat: 
 - Array
 - Basic Types
+- Data Structure Design
 - Dynamic Programming
 - Greedy Algorithm
 - Hashing 
 - Linked List
 - Recursion
-- Stack
+- Stack and Queue
 - String
 - Tree
 
@@ -28,6 +29,7 @@ And for each question, the solutions have the following parts:
 <br/> 341	Flatten Nested List Iterator
 <br/> 722	Remove Comments
 <br/> 207	Course Schedule
+<br/> 68	Text Justification
 
 # Questions with slow algorithm
 <br/> 65	Valid Number
