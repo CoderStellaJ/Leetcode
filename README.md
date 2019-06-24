@@ -27,8 +27,6 @@ And for each question, the solutions have the following parts:
 <br/> 301	Remove Invalid Parentheses
 <br/> 336 Palindrome Pairs
 <br/> 341	Flatten Nested List Iterator
-<br/> 722	Remove Comments
-<br/> 207	Course Schedule
 <br/> 68	Text Justification
 <br/> 208	Implement Trie (Prefix Tree)
 <br/> 468 Validate IP Address
