@@ -2,6 +2,10 @@
 Runtime: 2 ms, faster than 62.48% of Java online submissions for Fraction to Recurring Decimal.
 Memory Usage: 34 MB, less than 100.00% of Java online submissions for Fraction to Recurring Decimal.
 
+Complexity:
+runtime: O(N)
+space: O(N)
+
 Algorithm:
 1. determine the sign because there are negative numbers
 2. get the int part
