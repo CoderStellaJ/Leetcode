@@ -30,6 +30,7 @@ And for each question, the solutions have the following parts:
 <br/> 208	Implement Trie (Prefix Tree)
 <br/> 468 Validate IP Address
 <br/> 195	Tenth Line
+<br/> 212	Word Search II
 
 # Questions with slow algorithm
 <br/> 65	Valid Number
