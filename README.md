@@ -32,6 +32,7 @@ And for each question, the solutions have the following parts:
 <br/> 195	Tenth Line
 <br/> 212	Word Search II
 <br/> 126	Word Ladder II
+<br/> 843	Guess the Word
 
 # Questions with slow algorithm
 <br/> 65	Valid Number
