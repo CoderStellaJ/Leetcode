@@ -35,6 +35,5 @@ And for each question, the solutions have the following parts:
 # Questions with slow algorithm
 <br/> 65	Valid Number
 <br/> 297	Serialize and Deserialize Binary Tree
-<br/> 127	Word Ladder
 <br/> 85	Maximal Rectangle
 <br/> 43	Multiply Strings
