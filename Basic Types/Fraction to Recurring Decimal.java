@@ -5,10 +5,10 @@ Memory Usage: 34 MB, less than 100.00% of Java online submissions for Fraction t
 Algorithm:
 1. determine the sign because there are negative numbers
 2. get the int part
-3. record down the remainder and quotient:
+3. record down the remainder and quotient in a hashmap:
 Note that here the remainder should be the one on the top instead of at the bottom. 
 Otherwise, for same remainder, the quotients are not the same 
-4. 
+4. deal with the cases that: 1) recurring part occurs; 2) remainder is 0
 
 Note:
 1. calculation type of question: use long type instead of int !
