@@ -24,7 +24,6 @@ And for each question, the solutions have the following parts:
 # Skipped Questions
 <br/> 10	Regular Expression Matching  - Complexity Analysis for algo 1
 <br/> 535	Encode and Decode TinyURL
-<br/> 301	Remove Invalid Parentheses
 <br/> 336 Palindrome Pairs
 <br/> 68	Text Justification
 <br/> 208	Implement Trie (Prefix Tree)
