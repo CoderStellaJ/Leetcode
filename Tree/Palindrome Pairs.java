@@ -1,6 +1,33 @@
 /*
+Algorithm 3:
+1. Suppose we have A and B, AB is palindrome. Which means
+case 1, A is longer than B, then reverse B must be prefix of A
+e.g. A:sll, B:ls
+case 2, B is longer than A, then reverse B must be A + a palindromic suffix
+e.g. A:ls, B:qqsl
+
+2. We store all the words into Trie, and traverse each reversed word, say it, B.
+If next char in B is not in trie, we return
+If we find TrieNode that hasWord in it, we fall into case 2, and we only need to check the suffix of B is palindromic
+If we loop through B and we get to a TrieNode, we know it stores all words whose suffix are palindromic, 
+we add each pair of index (idx, B)
+
+Note: 
+1. special case such as empty string, we need add one extra pair. ( "" + palindrome = palindrome + "")
+2. palindrome itself could find itself in our method, so we definitely need to check if indexes are unique.
+
+Knowledge: 
+1. Trie
+Each node is a letter and each path forms a word
+2. Default access modifier
+Default access modifier is package-private - visible only from the same package
+*/
+//////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+/*
 Problem:
-"s" and "lls" most part of the palindrome is in another string
+"s" and "lls", most part of the palindrome is in another string
 
 Algorithm 2: Hashset
 Matching/ Pairing questions can use hashing to quickly retrieve elements
