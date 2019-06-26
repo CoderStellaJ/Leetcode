@@ -24,10 +24,10 @@ And for each question, the solutions have the following parts:
 # Skipped Questions
 <br/> 10	Regular Expression Matching  - Complexity Analysis for algo 1
 <br/> 535	Encode and Decode TinyURL
-<br/> 336 Palindrome Pairs
+<br/> 336 Palindrome Pairs (hard)
 <br/> 68	Text Justification
 <br/> 212	Word Search II
-<br/> 126	Word Ladder II
+<br/> 126	Word Ladder II (hard)
 <br/> 843	Guess the Word
 
 # Questions with slow algorithm
