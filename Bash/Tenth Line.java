@@ -7,6 +7,6 @@ tail and head
 */
 /////////////////////////////////////////////////////////////////////
 # Read from the file file.txt and output the tenth line to stdout.
-tail -n +10 file.txt | head -1
-//tail get the 10th line onwards(including 10th line)
+tail -n +10 file.txt|head -n 1
+//tail get the last 10 lines
 //head get the first line from the tail output
