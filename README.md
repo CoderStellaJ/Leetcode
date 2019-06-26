@@ -28,7 +28,6 @@ And for each question, the solutions have the following parts:
 <br/> 336 Palindrome Pairs
 <br/> 68	Text Justification
 <br/> 208	Implement Trie (Prefix Tree)
-<br/> 195	Tenth Line
 <br/> 212	Word Search II
 <br/> 126	Word Ladder II
 <br/> 843	Guess the Word
