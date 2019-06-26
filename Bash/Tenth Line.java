@@ -12,7 +12,8 @@ $ head -n 5 products.txt
 2) -n -7
 The following command will omit the last 7 lines from products.txt file.
 $ head -n -7 products.txt
-3) -n +10
+3) -n +3
+read the first 3 lines
 
 2.tail
 By default, ‘tail’ command reads last 10 lines of the file. 
@@ -25,6 +26,8 @@ $ tail -n 2 employee.txt
 If you want to omit the specific lines from the beginning then you have to use ‘-n’ option with negative value in ‘tail’ command. 
 The following command will display the content of employee.txt file by omitting 3 lines from the beginning.
 $ tail -n -3 employee.txt
+3) -n +3
+starts read from the 3rd line
 
 3.head and tail
 The following command will read lines from 2 to 6 of products.txt file. 
