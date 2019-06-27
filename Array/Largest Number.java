@@ -16,6 +16,10 @@ In other words, our custom comparator preserves transitivity, so the sort is cor
 so if the most significant number is 0, we can simply return 0. 
 Otherwise, we build a string out of the sorted array and return it.
 
+Note:
+The clever point is that instead of comparing digit by digit in int type
+we choose to compare by converting them to String type and use compareTo method
+
 */
 /////////////////////////////////////////////////////////////////////////////
 class Solution {
