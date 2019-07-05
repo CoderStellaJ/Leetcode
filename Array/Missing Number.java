@@ -7,6 +7,8 @@ runtime: O(N)
 space: O(1)
 
 Algorithm: swapping
+Note:
+no need to use an extra var for n.
 */
 //////////////////////////////////////////////////////////////////////////////
 class Solution {
