@@ -1,4 +1,7 @@
 /*
+Runtime: 66 ms, faster than 26.89% of Java online submissions for Accounts Merge.
+Memory Usage: 43.3 MB, less than 100.00% of Java online submissions for Accounts Merge.
+
 Union-Find Problem:
 Learn how to write DSU class
 
