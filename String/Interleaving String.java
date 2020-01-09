@@ -3,6 +3,10 @@ DP
 Time: O(m+n)
 Memory: O(m+n)
 Note: the index of the array and char
+
+Memory can be improved to O(n) by only keeping a 1d array for DP.
+because everytime updating F[i][j] only needs F[i-1][j] (old value of dp[j]) and F[i][j-1] (dp[j-1])
+so we don't need to keep record of F[i-1][j-1]
 */
 
 class Solution {
